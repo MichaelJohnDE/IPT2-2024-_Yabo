@@ -9,7 +9,6 @@
 </head>
 <body>
     <div id="root">
-    <h1>Welcome!</h1>
     
     </div>
     </div>

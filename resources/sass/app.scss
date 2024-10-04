@@ -6,3 +6,17 @@
 
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
+
+@import './navbar.scss';
+@import './image.scss';
+@import './modal.scss';
+
+
+
+// Add any global styles or other imports here
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e4e4e4;
+}
