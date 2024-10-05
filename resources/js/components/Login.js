@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import Navlist from './Navlist';
 import Modal from './Modal';
 
 export default function Login() {
@@ -30,7 +29,9 @@ export default function Login() {
             <div className='login'>
                 <Navlist /> {/* Navigation list */}
                 <h1>Login</h1> {/* Change this to 'Login' instead of 'Contact Us' */}
-                <button onClick={() => setIsModalOpen(true)}>Login</button>
+                <div className="button-container"> {/* Centering container */}
+                    <button onClick={() => setIsModalOpen(true)}>Login</button>
+                </div>
                 <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
                     <form onSubmit={handleSubmit} className='login-form'>
                         <div className='form-group'>

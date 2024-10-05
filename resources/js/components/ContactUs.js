@@ -1,11 +1,11 @@
 import React from 'react';
-import Navlist from './Navlist';
+import Footer from './Footer';
 
 export default function ContactUs() {
     return (
         <div className='contactus'>
-            <Navlist />
             <h1>Contact Us</h1>
+            <Footer />
         </div>
     );
 }
