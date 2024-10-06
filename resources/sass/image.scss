@@ -26,14 +26,19 @@
         transform: translate(-50%, -50%);
         color: white;
         text-align: center;
-        font-size: 5rem; // Increased font size
-        font-family: 'Lobster', cursive; // Chosen font
+        font-size: 3rem; // Increased font size
+        font-family: 'Roboto Slab',serif;// Chosen font
         z-index: 1;
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
         padding: 20px;
         border-radius: 5px;
         white-space: nowrap; // Prevents text from wrapping to the next line
     }
+
+    .heading {
+        margin-top: 50px;
+    }
+
     
     
 }

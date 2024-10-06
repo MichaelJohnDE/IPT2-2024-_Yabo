@@ -10369,13 +10369,13 @@ function Footer() {
       className: "footer-content",
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("p", {
         className: "footer-text",
-        children: ["\xA9 ", new Date().getFullYear(), " FSUU Enrollment System. All Rights Reserved."]
+        children: ["\xA9 ", new Date().getFullYear(), " Father Saturnino Urios University ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("br", {}), " Online Processing Information System. All Rights Reserved."]
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("p", {
         className: "Footer-links",
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
           href: "/aboutus",
           children: "About Us"
-        }), " |", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
           href: "/contactus",
           children: " Contact Us"
         })]
@@ -10400,20 +10400,29 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var _src_CBE_Building_Enhanced_png__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../src/CBE_Building_Enhanced.png */ "./src/CBE_Building_Enhanced.png");
 /* harmony import */ var _Footer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Footer */ "./resources/js/components/Footer.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var _PanelWithBlocks__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./PanelWithBlocks */ "./resources/js/components/PanelWithBlocks.js");
+/* harmony import */ var _Paneldata__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Paneldata */ "./resources/js/components/Paneldata.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 
-
+ // Import your image
+ // Import Footer
+ // Import PanelWithBlocks
 
 
 function Home() {
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
     className: "home",
-    children: [" ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("img", {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("img", {
       src: _src_CBE_Building_Enhanced_png__WEBPACK_IMPORTED_MODULE_1__["default"],
       alt: "Description of image"
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("h1", {
-      children: " Welcome to FSUU Enrollment System"
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_Footer__WEBPACK_IMPORTED_MODULE_2__["default"], {})]
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("h1", {
+      children: " Welcome to Father Saturnino Urios University"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("br", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("h1", {
+      className: "heading",
+      children: "Online Processing Information System"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_PanelWithBlocks__WEBPACK_IMPORTED_MODULE_3__["default"], {
+      panelData: _Paneldata__WEBPACK_IMPORTED_MODULE_4__["default"]
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_Footer__WEBPACK_IMPORTED_MODULE_2__["default"], {})]
   });
 }
 
@@ -10513,6 +10522,152 @@ function Navlist(_ref) {
         children: "Login"
       })]
     })]
+  });
+}
+
+/***/ }),
+
+/***/ "./resources/js/components/PanelWithBlocks.js":
+/*!****************************************************!*\
+  !*** ./resources/js/components/PanelWithBlocks.js ***!
+  \****************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ PanelWithBlocks)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
+
+// Sample data for the 4 blocks
+
+var panelData = [{
+  imgUrl: '/files/7073047/asian-boy-1.jpg?lmsauth=631c2f572e36445fda3d53fc4530ef2ba4415d86',
+  title: 'Captivating classes',
+  description: 'Interactive classes will keep students engaged and they will be able to learn at a faster pace.',
+  btnText: 'Class catalog',
+  btnLink: '#',
+  btnColor: '#009241'
+}, {
+  imgUrl: '/files/7073047/teachers.png?lmsauth=971ccc577bd4348aa7826f047112eb6979bba98c',
+  title: 'The best teachers',
+  description: 'Our staff comes from diverse teaching backgrounds and they are some of the best in the country.',
+  btnText: 'About FSUU',
+  btnLink: '/page/show/470453',
+  btnColor: '#009241'
+}, {
+  imgUrl: '/files/7073047/asian-group-6.png?lmsauth=3ecd29a9120143d7906cb457fac6629c9d9e8661',
+  title: 'Engaging activities',
+  description: 'FSUU has exciting annual activities planned for 2020. Have a look right now.',
+  btnText: 'Calendar',
+  btnLink: '/portal_calendar',
+  btnColor: '#009241'
+}, {
+  imgUrl: '/files/7073047/literature.png?lmsauth=080c8646ad9da24e5e9fd2d0a428ab69ace13c0a',
+  title: 'Come to FSUU',
+  description: 'Our enrollment is open now for 2021. Drop us a message on our contact form and we will be in touch.',
+  btnText: 'Contact us',
+  btnLink: '/contact_visitor',
+  btnColor: '#009241'
+}];
+function PanelWithBlocks() {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("section", {
+    className: "panel panel1",
+    "data-panel-id": "104146",
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+      className: "row-4-blocks",
+      children: panelData.map(function (block, index) {
+        return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+          className: "block",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+            className: "flexFixer",
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+              className: "imgCrop",
+              style: {
+                backgroundImage: "url(".concat(block.imgUrl, ")")
+              }
+            })
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("p", {
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("strong", {
+              children: block.title
+            })
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("p", {
+            children: block.description
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+            className: "btnHolder",
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
+              href: block.btnLink,
+              className: "colorBtn roundedBtn panelBtn",
+              target: "_blank",
+              rel: "noopener noreferrer",
+              style: {
+                backgroundColor: block.btnColor
+              },
+              children: block.btnText
+            })
+          })]
+        }, index);
+      })
+    })
+  });
+}
+
+/***/ }),
+
+/***/ "./resources/js/components/Paneldata.js":
+/*!**********************************************!*\
+  !*** ./resources/js/components/Paneldata.js ***!
+  \**********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ panelData)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var _PanelWithBlocks__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./PanelWithBlocks */ "./resources/js/components/PanelWithBlocks.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
+
+
+var panel = [{
+  imgUrl: '/files/7073047/asian-boy-1.jpg?lmsauth=631c2f572e36445fda3d53fc4530ef2ba4415d86',
+  title: 'Captivating classes',
+  description: 'Interactive classes will keep students engaged and they will be able to learn at a faster pace.',
+  btnText: 'Class catalog',
+  btnLink: '#',
+  btnColor: '#009241'
+}, {
+  imgUrl: '/files/7073047/teachers.png?lmsauth=971ccc577bd4348aa7826f047112eb6979bba98c',
+  title: 'The best teachers',
+  description: 'Our staff comes from diverse teaching backgrounds and they are some of the best in the country.',
+  btnText: 'About FSUU',
+  btnLink: '/page/show/470453',
+  btnColor: '#009241'
+}, {
+  imgUrl: '/files/7073047/asian-group-6.png?lmsauth=3ecd29a9120143d7906cb457fac6629c9d9e8661',
+  title: 'Engaging activities',
+  description: 'FSUU has exciting annual activities planned for 2020. Have a look right now.',
+  btnText: 'Calendar',
+  btnLink: '/portal_calendar',
+  btnColor: '#009241'
+}, {
+  imgUrl: '/files/7073047/literature.png?lmsauth=080c8646ad9da24e5e9fd2d0a428ab69ace13c0a',
+  title: 'Come to FSUU',
+  description: 'Our enrollment is open now for 2021. Drop us a message on our contact form and we will be in touch.',
+  btnText: 'Contact us',
+  btnLink: '/contact_visitor',
+  btnColor: '#009241'
+}];
+function panelData() {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_PanelWithBlocks__WEBPACK_IMPORTED_MODULE_1__["default"], {
+      panel: panelData
+    })
   });
 }
 

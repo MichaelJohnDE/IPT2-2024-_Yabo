@@ -1,0 +1,53 @@
+//CONTACT US FORM DESIGN
+.contactus {
+    .contact-form {
+        display: flex;
+        flex-direction: column;
+        max-width: 600px;
+        margin: 0 auto;
+        
+        .form-group {
+            display: flex;
+            flex-direction: column; 
+            margin-bottom: 15px;
+            margin-top: 10px;
+
+            label {
+                margin-bottom: 5px; 
+            }
+
+            input, textarea {
+                padding: 10px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+            }
+
+            textarea {
+                height: 100px;
+            }
+        }
+        
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            align-self: flex-end; 
+
+            &:hover {
+                background-color: #0056b3;
+            }
+        }
+    }
+
+    .contactus-text {
+        color: $secondary-color;
+        text-align: center;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        font-size: 18px;
+    }
+}
+
