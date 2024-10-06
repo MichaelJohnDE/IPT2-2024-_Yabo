@@ -1,5 +1,5 @@
 $primary-color: #2c3e50; // Dark Blue
-$secondary-color: #18bc9c; // Green
+$secondary-color: #000000; // Black
 
 nav {
     background-color: #007bff; // Blue background color
@@ -8,7 +8,7 @@ nav {
     justify-content: flex-end; // Align items to the right
 
     a {
-        color: white; // White text color
+        color: white; 
         text-decoration: none;
         padding: 0.5rem 1rem;
         display: inline-block;
@@ -34,37 +34,54 @@ nav {
 
     p {
         color: $secondary-color;
+        text-align: justify;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        font-size: 15px;
+    }
+
+    h2 {
+        color: rgb(77, 77, 77);
+        margin-left: 1rem;
+        margin-right: 1rem;
     }
 }
 
 //LOGIN BUTTON
 .login-button {
-    background-color: #034a96; /* Primary color */
-    color: white;              /* Text color */
-    border: none;              /* Remove default border */
-    border-radius: 5px;       /* Rounded corners */
-    padding: 10px 20px;       /* Vertical | Horizontal padding */
-    font-size: 16px;          /* Font size */
-    cursor: pointer;           /* Pointer cursor on hover */
-    transition: background-color 0.3s, transform 0.2s; /* Smooth transition */
+    background-color: #034a96; 
+    color: white;              
+    border: none;              
+    border-radius: 5px;       
+    padding: 10px 20px;       
+    font-size: 16px;          
+    cursor: pointer;          
+    transition: background-color 0.3s, transform 0.2s; 
     margin-right: 10px;
     margin-left: 10px;
 }
 
 .login-button:hover {
-    background-color: #0056b3; /* Darker shade on hover */
-    transform: translateY(-2px); /* Slight lift effect */
+    background-color: #0056b3; 
+    transform: translateY(-2px); 
 }
 
 .login-button:focus {
-    outline: none;             /* Remove default outline */
-    box-shadow: 0 0 5px #0056b3; /* Shadow on focus */
+    outline: none;             
+    box-shadow: 0 0 5px #0056b3; 
 }
+
+.login-text {
+    color: $primary-color;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
 
 //LEFT SIDE SA NAVBAR
 .navbar-brand {
     display: flex;
-    align-items: center; /* Center items vertically */
+    align-items: center;
 }
 
 .brand-text {
@@ -72,42 +89,42 @@ nav {
 }
 
 .logo {
-    width: 50px; /* Adjust logo size */
+    width: 50px; 
     height: 50px;
-    margin-right: 10px; /* Space between logo and text */
-    border-radius: 50%; /* Makes the image circular */
-    object-fit: cover; /* Ensures the image covers the area */
+    margin-right: 10px; 
+    border-radius: 50%; 
+    object-fit: cover; 
     margin-left: 10px;
 }
 
 //ANG ANIMATION SA MODAL
 .modal-overlay {
-    display: flex; /* Use flexbox to center the modal */
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-    position: fixed; /* Stay in place */
-    top: 0; /* Stay at the top */
-    left: 0; /* Stay at the left */
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    background-color: rgba(0, 0, 0, 0.7); /* Dark background */
-    opacity: 0; /* Start invisible */
-    transition: opacity 0.5s ease; /* Smooth fade effect */
-    pointer-events: none; /* Prevent clicks when modal is not open */
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%; 
+    background-color: rgba(0, 0, 0, 0.7); 
+    opacity: 0; 
+    transition: opacity 0.5s ease; 
+    pointer-events: none; 
 }
 
 .modal-overlay.open {
-    opacity: 1; /* Fully visible when open */
-    pointer-events: auto; /* Allow interactions when modal is open */
+    opacity: 1; 
+    pointer-events: auto; 
 }
 
 .modal-content {
-    background-color: white; /* Modal background */
-    padding: 20px; /* Spacing inside the modal */
-    border-radius: 8px; /* Rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for depth */
-    transform: translateY(-20px); /* Start slightly above */
-    transition: transform 0.5s ease; /* Transition for the position */
+    background-color: white; 
+    padding: 20px;
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: translateY(-20px); 
+    transition: transform 0.5s ease; 
 }
 
 .modal-overlay.open .modal-content {
@@ -115,39 +132,98 @@ nav {
 }
 
 .close-button {
-    background: none; /* No background */
-    border: none; /* No border */
-    font-size: 1.5rem; /* Font size for close button */
-    cursor: pointer; /* Pointer cursor for button */
-    position: absolute; /* Positioning for the close button */
-    top: 10px; /* Distance from the top */
-    right: 10px; /* Distance from the right */
+    background: none; 
+    border: none; 
+    font-size: 1.5rem; 
+    cursor: pointer; 
+    position: absolute; 
+    top: 10px; 
+    right: 10px; 
 }
 
 //ERROR MESSAGE SA LOGIN MODAL
 .error-message {
-    color: red; /* Change the text color to red */
-    font-size: 0.9rem; /* Adjust font size */
-    margin-top: 5px; /* Space above the error message */
+    color: red; 
+    font-size: 0.9rem; 
+    margin-top: 5px; 
 }
+
 
 //FOOTER NI SA LANDING PAGE/S
 
 .footer {
-    background-color: #007bff; /* Dark background */
-    color: white; /* White text */
-    padding: 20px; /* Spacing inside footer */
-    text-align: center; /* Center text */
-    position: relative; /* Positioning */
-    bottom: 0; /* Stick to the bottom */
-    width: 100%; /* Full width */
+    background-color: #007bff; 
+    color: white; 
+    padding: 20px; 
+    text-align: center; 
+    position: fixed; 
+    bottom: 0; 
+    width: 100%; 
 }
 
 .footer a {
-    color: #fff; /* White link color */
-    text-decoration: none; /* No underline */
+    color: #fff; 
+    text-decoration: none; 
 }
 
 .footer a:hover {
-    text-decoration: underline; /* Underline on hover */
+    text-decoration: underline; 
 }
+
+.footer-text {
+    color: white !important;
+}
+
+//CONTACT US FORM DESIGN
+.contactus {
+    .contact-form {
+        display: flex;
+        flex-direction: column;
+        max-width: 600px;
+        margin: 0 auto;
+        
+        .form-group {
+            display: flex;
+            flex-direction: column; 
+            margin-bottom: 15px;
+            margin-top: 10px;
+
+            label {
+                margin-bottom: 5px; 
+            }
+
+            input, textarea {
+                padding: 10px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+            }
+
+            textarea {
+                height: 100px;
+            }
+        }
+        
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            align-self: flex-end; 
+
+            &:hover {
+                background-color: #0056b3;
+            }
+        }
+    }
+
+    .contactus-text {
+        color: $secondary-color;
+        text-align: center;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        font-size: 18px;
+    }
+}
+

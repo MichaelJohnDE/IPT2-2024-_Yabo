@@ -10221,6 +10221,18 @@ function AboutUs() {
     className: "aboutus",
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("h1", {
       children: "About Us"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("h2", {
+      children: "Overview"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("p", {
+      children: "We are a Filipino, Catholic, diocesan, educational institution committed to imparting our students with the skills, knowledge, and competence to succeed in their chosen fields of study. Our administrators, faculty, and staff are guided by the Urian core values of Unity, Religiosity, Integrity, Altruism, and Nationalism. We offer a holistic brand of education, and we are proud to be recognized as one of the leading institutions in Northeastern Mindanao. As we forward educational enhancement, research development, and service to the community, our university produces professionals who make significant contributions in their future lines of work, both here and abroad. Three campuses ensure safe and conducive avenues for learning: the Archbishop Morelos Campus in Libertad, the Juan de Dios Pueblos Senior High School in our main campus at the heart of Butuan City. Altogether, FSUU provides an atmosphere of excellence and innovation that is mindful of society\u2019s ever-changing needs."
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("h2", {
+      children: "Vision and Mission"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("p", {
+      children: "As an academic institution of higher learning, Fr. Saturnino Urios University espouses dynamism within the changing local and global environment. It is therefore tasked to view these changing environments in the social institutions and experiences for the relevance of existence as a Filipino, Catholic, Diocesan educational institution as it continues to learn from the past. And as Fr. Saturnino Urios University entered into the new millennium and its centennial existence, the school committed itself to introspection and reflection in the light of its vision-mission, in its contribution to the development of the communities it is serving, and the analysis of forces for change in the greater environment. This is done in order for Fr. Saturnino Urios University to remain relevant in the region\u2019s social, political, economic, cultural, and spiritual context in the years of the new millennium. The introspection-reflection helped define the strategic direction and the renewed identity and recommitment that Fr. Saturnino Urios University is taking for the future through its re-crafted Vision, Mission, and Goals."
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("h2", {
+      children: "History"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("p", {
+      children: "Father Saturnino Urios University was christened Butuan Parochial School on October 21, 1901 by Reverend Father Saturnino Urios, S.J. It began as a boys\u2019 school which later gained government recognition in 1927 as an elementary school. It was, at first, a low building made of bricks, adjacent to the old church. The school changed its identity on several occasions over the next 50 years under the management of the Dutch Missionaries of the Sacred Heart of Jesus (MSC). In 1939, the Butuan Parochial School opened its high school department and renamed itself to Father Urios High School, after the school\u2019s founder who had died 23 years prior. With the opening of the college department in 1950, it was renamed to Father Urios College, simplified in 1970 as Urios College. The Filipinization of schools under the 1972 Philippine Constitution gave way to the diocesan administration of Urios College. Its first and longest-staying lay president, Juanito A. Lao Ph.D., was then installed in 1976. From 1970-2004, Urios College served the community, contributing immensely to the spiritual, intellectual, cultural, political, social, and moral development of the people of Caraga. It was during these years that the school realized its motto: \"Luceat Lux Vestra\" - Let Your Light Shine. Urios College has taken a drastic turn since Rev. Fr. John Christian U. Young took its helm as President in 2004. At that time, the school\u2019s facilities had been worn and torn; Butuanons of today recall how the school seemed to have lost its flare. Under Fr. Young\u2019s leadership and example, however, Urios College reorganized its operations and rekindled its commitment to academic excellence and quality education. On July 10, 2006, after a strong showing from the entire Urian community, Urios College elevated its typology into a university\u2014the first homegrown university in Caraga. From handling a few pupils in a non-graded, catechism school, what was once Butuan Parochial School is now Father Saturnino Urios University, or FSUU. It offers the full K to 12 program; tertiary courses in accountancy, business and management, computer science, engineering and technology, information technology, nursing, arts and sciences, criminology, and teacher education. FSUU also has its own College of Law and its Graduate Studies and Research Office (GSRO). The GSRO offers Masters in Nursing, Educational Management, Guidance and Counseling, Teaching Filipino, Teaching English, Teaching General Science, Teaching Special Education, Master of Science in Physical Education, Master of Science in Teaching Math, Master in Public Administration and Master in Business Administration, Doctoral in Management, and Doctor of Philosophy in Education. Most of FSUU\u2019s academic programs are accredited by the Philippine Accrediting Association of Schools, Colleges, and Universities (PAASCU)."
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_Footer__WEBPACK_IMPORTED_MODULE_1__["default"], {})]
   });
 }
@@ -10249,6 +10261,54 @@ function ContactUs() {
     className: "contactus",
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("h1", {
       children: "Contact Us"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("p", {
+      className: "contactus-text",
+      children: "To contact us, enter your name, email address, and message, then press Send."
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+      className: "contact-form",
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+        className: "form-group",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("label", {
+          children: "Name:"
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("input", {
+          type: "text",
+          placeholder: "Enter your name"
+        })]
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+        className: "form-group",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("label", {
+          children: "Email:"
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("input", {
+          type: "email",
+          placeholder: "Enter your email"
+        })]
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+        className: "form-group",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("label", {
+          children: "Phone:"
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("input", {
+          type: "tel",
+          placeholder: "Enter your phone number"
+        })]
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+        className: "form-group",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("label", {
+          children: "Subject:"
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("input", {
+          type: "text",
+          placeholder: "Enter the subject"
+        })]
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+        className: "form-group",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("label", {
+          children: "Message:"
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("textarea", {
+          placeholder: "Enter your message"
+        })]
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("button", {
+        type: "submit",
+        children: "Send"
+      })]
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_Footer__WEBPACK_IMPORTED_MODULE_1__["default"], {})]
   });
 }
@@ -10267,52 +10327,20 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (/* binding */ Dashboard)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _Navlist__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Navlist */ "./resources/js/components/Navlist.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
-
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 
 
 function Dashboard() {
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
     className: "dashboard",
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-      className: "sidebar",
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("ul", {
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("li", {
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("a", {
-            href: "/home",
-            children: "Home"
-          })
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("li", {
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("a", {
-            href: "/aboutus",
-            children: "About Us"
-          })
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("li", {
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("a", {
-            href: "/contactus",
-            children: "Contact Us"
-          })
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("li", {
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("a", {
-            href: "/students",
-            children: "Students"
-          })
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("li", {
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("a", {
-            href: "/courses",
-            children: "Courses"
-          })
-        })]
-      })
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
       className: "content",
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("h1", {
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("h1", {
         children: "Dashboard"
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("p", {
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("p", {
         children: "Welcome to the Enrollment System Dashboard!"
       })]
-    })]
+    })
   });
 }
 
@@ -10340,8 +10368,10 @@ function Footer() {
     children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
       className: "footer-content",
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("p", {
+        className: "footer-text",
         children: ["\xA9 ", new Date().getFullYear(), " FSUU Enrollment System. All Rights Reserved."]
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("p", {
+        className: "Footer-links",
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
           href: "/aboutus",
           children: "About Us"
@@ -10417,7 +10447,10 @@ var Modal = function Modal(_ref) {
       onClick: function onClick(e) {
         return e.stopPropagation();
       },
-      children: [" ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("button", {
+      children: [" ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("h1", {
+        className: "login-text",
+        children: "Login"
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("button", {
         className: "close-button",
         onClick: onClose,
         children: "\xD7"
@@ -10528,9 +10561,19 @@ function Routers() {
     _useState2 = _slicedToArray(_useState, 2),
     isModalOpen = _useState2[0],
     setIsModalOpen = _useState2[1]; // State for modal visibility
+  var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(""),
+    _useState4 = _slicedToArray(_useState3, 2),
+    username = _useState4[0],
+    setUsername = _useState4[1]; // Lifted username state
+  var _useState5 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(""),
+    _useState6 = _slicedToArray(_useState5, 2),
+    password = _useState6[0],
+    setPassword = _useState6[1]; // Lifted password state
 
   var handleModalClose = function handleModalClose() {
     setIsModalOpen(false);
+    setUsername(""); // Reset username
+    setPassword(""); // Reset password
   };
   var handleLoginClick = function handleLoginClick() {
     setIsModalOpen(true); // Function to open modal
@@ -10542,6 +10585,10 @@ function Routers() {
       isOpen: isModalOpen,
       onClose: handleModalClose,
       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(LoginModalContent, {
+        username: username,
+        setUsername: setUsername,
+        password: password,
+        setPassword: setPassword,
         onClose: handleModalClose
       })
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)(react_router_dom__WEBPACK_IMPORTED_MODULE_10__.Routes, {
@@ -10567,15 +10614,11 @@ function Routers() {
 
 // Create a component for the modal content
 function LoginModalContent(_ref) {
-  var onClose = _ref.onClose;
-  var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(""),
-    _useState4 = _slicedToArray(_useState3, 2),
-    username = _useState4[0],
-    setUsername = _useState4[1];
-  var _useState5 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(""),
-    _useState6 = _slicedToArray(_useState5, 2),
-    password = _useState6[0],
-    setPassword = _useState6[1];
+  var username = _ref.username,
+    setUsername = _ref.setUsername,
+    password = _ref.password,
+    setPassword = _ref.setPassword,
+    onClose = _ref.onClose;
   var navigate = (0,react_router_dom__WEBPACK_IMPORTED_MODULE_10__.useNavigate)();
   var _useState7 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(""),
     _useState8 = _slicedToArray(_useState7, 2),
@@ -10587,7 +10630,6 @@ function LoginModalContent(_ref) {
     if (username === "admin" && password === "admin123") {
       navigate("/dashboard");
       onClose(); // Close modal if successful
-      // Navigate to dashboard or perform other actions here
     } else {
       setError("Invalid username or password."); // Set error message
       setPassword(""); // Optionally clear the password

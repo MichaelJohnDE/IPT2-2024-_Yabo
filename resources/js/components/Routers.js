@@ -11,9 +11,13 @@ import Modal from "./Modal";
 
 export default function Routers() {
     const [isModalOpen, setIsModalOpen] = useState(false); // State for modal visibility
+    const [username, setUsername] = useState(""); // Lifted username state
+    const [password, setPassword] = useState(""); // Lifted password state
 
     const handleModalClose = () => {
         setIsModalOpen(false);
+        setUsername(""); // Reset username
+        setPassword(""); // Reset password
     };
 
     const handleLoginClick = () => {
@@ -24,7 +28,13 @@ export default function Routers() {
         <Router>
             <Navlist onLoginClick={handleLoginClick} /> {/* Pass function to Navlist */}
             <Modal isOpen={isModalOpen} onClose={handleModalClose}>
-                <LoginModalContent onClose={handleModalClose} />
+                <LoginModalContent 
+                    username={username} 
+                    setUsername={setUsername} 
+                    password={password} 
+                    setPassword={setPassword} 
+                    onClose={handleModalClose} 
+                />
             </Modal>
             <Routes>
                 <Route path="/" element={<Home />} />
@@ -38,9 +48,7 @@ export default function Routers() {
 }
 
 // Create a component for the modal content
-function LoginModalContent({ onClose }) {
-    const [username, setUsername] = useState("");
-    const [password, setPassword] = useState("");
+function LoginModalContent({ username, setUsername, password, setPassword, onClose }) {
     const navigate = useNavigate();
     const [error, setError] = useState("");
 
@@ -50,7 +58,6 @@ function LoginModalContent({ onClose }) {
         if (username === "admin" && password === "admin123") {
             navigate("/dashboard");
             onClose(); // Close modal if successful
-            // Navigate to dashboard or perform other actions here
         } else {
             setError("Invalid username or password."); // Set error message
             setPassword(""); // Optionally clear the password
