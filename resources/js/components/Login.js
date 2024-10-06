@@ -3,17 +3,15 @@ import { useNavigate } from "react-router-dom";
 import Modal from './Modal';
 
 export default function Login() {
-    // State variables for username, password, and modal visibility
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
     const [isModalOpen, setIsModalOpen] = useState(false);
-    const navigate = useNavigate(); // Hook for navigation
+    const navigate = useNavigate();
 
-    // Function to handle form submission
     const handleSubmit = (e) => {
         e.preventDefault();
-        // Check credentials
         if (username === "admin" && password === "admin123") {
+            login();
             navigate("/dashboard");
         } else if (username === "admin") {
             alert("Invalid password");
@@ -26,33 +24,33 @@ export default function Login() {
     };
 
     return (
-            <div className='login'>
-                <Navlist /> {/* Navigation list */}
-                <h1>Login</h1> {/* Change this to 'Login' instead of 'Contact Us' */}
-                <div className="button-container"> {/* Centering container */}
-                    <button onClick={() => setIsModalOpen(true)}>Login</button>
-                </div>
-                <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
-                    <form onSubmit={handleSubmit} className='login-form'>
-                        <div className='form-group'>
-                            <label>Username:</label>
-                            <input
-                                type="text"
-                                value={username}
-                                onChange={(e) => setUsername(e.target.value)}
-                            />
-                        </div>
-                        <div className='form-group'>
-                            <label>Password:</label>
-                            <input
-                                type="password"
-                                value={password}
-                                onChange={(e) => setPassword(e.target.value)}
-                            />
-                        </div>
-                        <button type="submit">Login</button>
-                    </form>
-                </Modal>
+        <div className='login'>
+            <Navlist /> 
+            <h1>Login</h1>
+            <div className="button-container">
+                <button onClick={() => setIsModalOpen(true)}>Login</button>
             </div>
+            <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
+                <form onSubmit={handleSubmit} className='login-form'>
+                    <div className='form-group'>
+                        <label>Username:</label>
+                        <input
+                            type="text"
+                            value={username}
+                            onChange={(e) => setUsername(e.target.value)}
+                        />
+                    </div>
+                    <div className='form-group'>
+                        <label>Password:</label>
+                        <input
+                            type="password"
+                            value={password}
+                            onChange={(e) => setPassword(e.target.value)}
+                        />
+                    </div>
+                    <button type="submit">Login</button>
+                </form>
+            </Modal>
+        </div>
     );
 }
