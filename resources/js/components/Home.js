@@ -5,6 +5,7 @@ import PanelWithBlocks from './PanelWithBlocks'; // Import PanelWithBlocks
 import panelData from './Paneldata';
 
 
+
 export default function Home() {
     return (
         <div className='home'>

@@ -1,5 +1,5 @@
 .footer {
-    background-color: #3e4751; 
+    background-color: #964229; 
     color: white; 
     padding: 20px; 
     text-align: center; 
@@ -20,13 +20,3 @@
 }
 
 // Additional styles to ensure the footer stays at the bottom of the content
-body, html {
-    height: 100%;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-}
-
-.content {
-    flex: 1;
-}
