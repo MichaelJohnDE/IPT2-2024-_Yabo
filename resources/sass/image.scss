@@ -16,12 +16,12 @@
         height: auto;
         object-fit: cover;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        filter: grayscale(50%) blur(1px) brightness(60%);
+        filter: grayscale(50%) blur(5px) brightness(60%);
     }
 
     h1 {
         position: absolute;
-        top: 30%;
+        top: 20%;
         left: 50%;
         transform: translate(-50%, -50%);
         color: white;

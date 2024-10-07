@@ -11967,7 +11967,7 @@ textarea.form-control-lg {
   }
 }
 nav {
-  background-color: #686c79;
+  background-color: #007bff;
   padding: 1rem;
   display: flex;
   justify-content: flex-end;
@@ -12005,7 +12005,7 @@ nav br {
 }
 
 .login-button {
-  background-color: #034a96;
+  background-color: #1746A2;
   color: white;
   border: none;
   border-radius: 5px;
@@ -12018,7 +12018,7 @@ nav br {
 }
 
 .login-button:hover {
-  background-color: #0056b3;
+  background-color: #1746A2;
   transform: translateY(-2px);
 }
 
@@ -12119,11 +12119,11 @@ nav br {
   -o-object-fit: cover;
      object-fit: cover;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  filter: grayscale(50%) blur(1px) brightness(60%);
+  filter: grayscale(50%) blur(5px) brightness(60%);
 }
 .home h1, .home .h1 {
   position: absolute;
-  top: 30%;
+  top: 20%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
@@ -12215,7 +12215,7 @@ button[type=submit]:hover {
 }
 
 .footer {
-  background-color: #3e4751;
+  background-color: #964229;
   color: white;
   padding: 20px;
   text-align: center;
@@ -12230,17 +12230,6 @@ button[type=submit]:hover {
 }
 .footer .footer-text {
   color: white !important;
-}
-
-body, html {
-  height: 100%;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-}
-
-.content {
-  flex: 1;
 }
 
 .contactus .contact-form {
