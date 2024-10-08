@@ -1,5 +1,5 @@
-import React, { useState, useEffect, useRef } from "react"; 
-import { Link } from "react-router-dom";
+import React, { useState, useEffect, useRef } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import fsuulogo from '../../../src/fsuulogo.png';
 import profileIcon from '../../../src/profile.png'; 
 import { useAuth } from './AuthContext';
@@ -8,6 +8,7 @@ export default function DashboardNavlist() {
     const { logout } = useAuth();
     const [dropdownOpen, setDropdownOpen] = useState(false);
     const dropdownRef = useRef(null);
+    const navigate = useNavigate(); // To handle redirection
 
     const toggleDropdown = () => {
         setDropdownOpen(!dropdownOpen);
@@ -25,6 +26,15 @@ export default function DashboardNavlist() {
             document.removeEventListener("mousedown", closeDropdown);
         };
     }, []);
+
+    const handleLogout = async () => {
+        try {
+            await logout();
+            navigate("/"); // Redirect to homepage after logout
+        } catch (error) {
+            console.error("Failed to log out:", error);
+        }
+    };
 
     return (
         <nav className="navbar">
@@ -48,7 +58,7 @@ export default function DashboardNavlist() {
                         </div>
                         <Link to="/dashboard" className="side-profile-link">Dashboard</Link>
                         <Link to="/dashboard/profile" className="side-profile-link">Profile</Link>
-                        <button onClick={logout} className="side-profile-link logout-button">Logout</button>
+                        <button onClick={handleLogout} className="side-profile-link logout-button">Logout</button>
                     </div>
                 </div>
             </div>
