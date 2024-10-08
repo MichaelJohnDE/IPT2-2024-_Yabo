@@ -1,51 +1,29 @@
-// import React, { useState } from "react";
-// import ReactDOM from "react-dom";
-// import { BrowserRouter as Router, Routes, Route, useNavigate } from "react-router-dom";
+// import React from 'react';
+// import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+// import DashboardNavlist from './components/DashboardNavlist'; // Adjust the import path as needed
+// import Overview from './components/Dashboard'; // Example component
+// import Student from './components/admin/Student'; // Example component
+// import Notification from './components/Notification'; // Example component
+// import Search from './components/Search'; // Example component
+// import Profile from './components/Profile'; // Example component
+// import Dashboard from './components/Dashboard'; // Example component
 
-// import Home from "./Home"; 
-// import Dashboard from "./Dashboard";
-// import Navlist from "./Navlist2";
-// import Modal from "./Modal"; 
-
-// export default function Router2() { // Change the function name to Router2
-//     const [isLogoutModalOpen, setIsLogoutModalOpen] = useState(false);
-//     const navigate = useNavigate(); 
-
-//     const handleLogoutClick = () => {
-//         setIsLogoutModalOpen(true); 
-//     };
-
-//     const handleConfirmLogout = () => {
-//         // Handle logout logic here (e.g., clear user session, redirect)
-//         console.log("User logged out");
-//         setIsLogoutModalOpen(false); 
-//         navigate("/home"); 
-//     };
-
-//     const handleCancelLogout = () => {
-//         setIsLogoutModalOpen(false); 
-//     };
-
+// function Router2() {
 //     return (
-//         <>
-//             <Navlist onLogoutClick={handleLogoutClick} /> {/* Pass the logout handler */}
-//             <Routes>
-//                 <Route path="/" element={<Home />} /> {/* Home route */}
-//                 <Route path="/dashboard" element={<Dashboard />} />
-//                 {/* Add other routes here if necessary */}
-//             </Routes>
-
-//             {/* Logout Confirmation Modal */}
-//             <Modal isOpen={isLogoutModalOpen} onClose={handleCancelLogout}>
-//                 <h2>Confirm Logout</h2>
-//                 <p>Are you sure you want to log out?</p>
-//                 <button onClick={handleConfirmLogout}>Yes, Log out</button>
-//                 <button onClick={handleCancelLogout}>Cancel</button>
-//             </Modal>
-//         </>
+//         <Router>
+//             <div>
+//                 <DashboardNavlist />
+//                 <Routes>
+//                     <Route path="/dashboard/overview" element={<Overview />} />
+//                     <Route path="/dashboard/student" element={<Student />} />
+//                     <Route path="/dashboard/notification" element={<Notification />} />
+//                     <Route path="/dashboard/search" element={<Search />} />
+//                     <Route path="/dashboard/profile" element={<Profile />} />
+//                     <Route path="/dashboard" element={<Dashboard />} />
+//                 </Routes>
+//             </div>
+//         </Router>
 //     );
 // }
 
-// if (document.getElementById("root")) {
-//     ReactDOM.render(<Router2 />, document.getElementById("root")); // Ensure to render Router2
-// }
+// export default Router2;

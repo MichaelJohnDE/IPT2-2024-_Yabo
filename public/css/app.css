@@ -12478,6 +12478,65 @@ button[type=submit]:hover {
   color: white;
 }
 
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+.dashboard .content {
+  margin: 0 auto;
+  padding: 20px;
+  text-align: left;
+}
+.dashboard .content h1, .dashboard .content .h1 {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.dashboard .content p {
+  font-size: 18px;
+  margin-bottom: 40px;
+}
+.dashboard .content p b {
+  font-weight: bold;
+}
+.dashboard .content .department-row {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.dashboard .content .department-row .department-box {
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 20px;
+  width: 30%;
+  flex-grow: 1;
+  margin-right: 20px;
+}
+.dashboard .content .department-row .department-box:nth-child(3n) {
+  margin-right: 0;
+}
+.dashboard .content .department-row .department-box h2, .dashboard .content .department-row .department-box .h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.dashboard .content .department-row .department-box p {
+  color: #666;
+  margin-bottom: 20px;
+}
+.dashboard .content .department-row .department-box ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.dashboard .content .department-row .department-box ul li {
+  color: #666;
+  margin-bottom: 10px;
+}
+
 body {
   font-family: Arial, sans-serif;
   margin: 0;

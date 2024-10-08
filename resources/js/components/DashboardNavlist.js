@@ -33,8 +33,9 @@ export default function DashboardNavlist() {
                 <span className="brand-text">Father Saturnino Urios University</span>
             </div>
             <div className="navbar-links">
-                <Link to="/dashboard/overview" className="navbar-link">Overview</Link>
-                <Link to="/dashboard/notification" className="navbar-link">Notification</Link>
+                <Link to="/admin/dashboard" className="navbar-link">Overview</Link>
+                <Link to="/admin/student" className="navbar-link">Students</Link>
+                <Link to="/dashboard/notification" className="navbar-link">Notifications</Link>
                 <Link to="/dashboard/search" className="navbar-link">Search</Link>
                 <div className="headerDropdownBtn" ref={dropdownRef}>
                     <button onClick={toggleDropdown} className="userIcon">

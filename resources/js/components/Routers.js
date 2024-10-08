@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Routes, Route, useLocation, useNavigate } from
 import Home from "./Home";
 import AboutUs from "./AboutUs";
 import ContactUs from "./ContactUs";
-import Dashboard from "./Dashboard";
+import Dashboard from "./admin/Dashboard";
 import Navlist from "./Navlist";
 import DashboardNavlist from "./DashboardNavlist";
 import Login from "./Login";
@@ -34,7 +34,7 @@ export default function Routers() {
                     <Route path="/home" element={<Home />} />
                     <Route path="/aboutus" element={<AboutUs />} />
                     <Route path="/contactus" element={<ContactUs />} />
-                    <Route path="/dashboard/*" element={<Dashboard />} />
+                    <Route path="/admin/*" element={<Dashboard />} />
                 </Routes>
                 <LoginModal isOpen={isModalOpen} onClose={handleModalClose} />
             </Router>
@@ -44,7 +44,7 @@ export default function Routers() {
 
 function ConditionalNavlist({ onLoginClick }) {
     const location = useLocation();
-    return location.pathname.startsWith("/dashboard") ? (
+    return location.pathname.startsWith("/admin") ? (
         <DashboardNavlist />
     ) : (
         <Navlist onLoginClick={onLoginClick} />
@@ -62,7 +62,7 @@ function LoginModal({ isOpen, onClose }) {
         e.preventDefault();
         if (username === "admin" && password === "admin123") {
             login();
-            navigate("/dashboard");
+            navigate("/admin/dashboard");
             onClose();
         } else {
             setError("Invalid username or password.");

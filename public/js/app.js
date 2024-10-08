@@ -10384,37 +10384,6 @@ function ContactUs() {
 
 /***/ }),
 
-/***/ "./resources/js/components/Dashboard.js":
-/*!**********************************************!*\
-  !*** ./resources/js/components/Dashboard.js ***!
-  \**********************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ Dashboard)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
-
-
-function Dashboard() {
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-    className: "dashboard",
-    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
-      className: "content",
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("h1", {
-        children: "Dashboard"
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("p", {
-        children: "Welcome to the Enrollment System Dashboard!"
-      })]
-    })
-  });
-}
-
-/***/ }),
-
 /***/ "./resources/js/components/DashboardNavlist.js":
 /*!*****************************************************!*\
   !*** ./resources/js/components/DashboardNavlist.js ***!
@@ -10481,13 +10450,17 @@ function DashboardNavlist() {
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
       className: "navbar-links",
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_5__.Link, {
-        to: "/dashboard/overview",
+        to: "/admin/dashboard",
         className: "navbar-link",
         children: "Overview"
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_5__.Link, {
+        to: "/admin/student",
+        className: "navbar-link",
+        children: "Students"
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_5__.Link, {
         to: "/dashboard/notification",
         className: "navbar-link",
-        children: "Notification"
+        children: "Notifications"
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_5__.Link, {
         to: "/dashboard/search",
         className: "navbar-link",
@@ -10977,7 +10950,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Home__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Home */ "./resources/js/components/Home.js");
 /* harmony import */ var _AboutUs__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./AboutUs */ "./resources/js/components/AboutUs.js");
 /* harmony import */ var _ContactUs__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./ContactUs */ "./resources/js/components/ContactUs.js");
-/* harmony import */ var _Dashboard__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./Dashboard */ "./resources/js/components/Dashboard.js");
+/* harmony import */ var _admin_Dashboard__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./admin/Dashboard */ "./resources/js/components/admin/Dashboard.js");
 /* harmony import */ var _Navlist__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./Navlist */ "./resources/js/components/Navlist.js");
 /* harmony import */ var _DashboardNavlist__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./DashboardNavlist */ "./resources/js/components/DashboardNavlist.js");
 /* harmony import */ var _Login__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./Login */ "./resources/js/components/Login.js");
@@ -11034,8 +11007,8 @@ function Routers() {
           path: "/contactus",
           element: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_ContactUs__WEBPACK_IMPORTED_MODULE_4__["default"], {})
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_13__.Route, {
-          path: "/dashboard/*",
-          element: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_Dashboard__WEBPACK_IMPORTED_MODULE_5__["default"], {})
+          path: "/admin/*",
+          element: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_admin_Dashboard__WEBPACK_IMPORTED_MODULE_5__["default"], {})
         })]
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(LoginModal, {
         isOpen: isModalOpen,
@@ -11047,7 +11020,7 @@ function Routers() {
 function ConditionalNavlist(_ref) {
   var onLoginClick = _ref.onLoginClick;
   var location = (0,react_router_dom__WEBPACK_IMPORTED_MODULE_13__.useLocation)();
-  return location.pathname.startsWith("/dashboard") ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_DashboardNavlist__WEBPACK_IMPORTED_MODULE_7__["default"], {}) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_Navlist__WEBPACK_IMPORTED_MODULE_6__["default"], {
+  return location.pathname.startsWith("/admin") ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_DashboardNavlist__WEBPACK_IMPORTED_MODULE_7__["default"], {}) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_Navlist__WEBPACK_IMPORTED_MODULE_6__["default"], {
     onLoginClick: onLoginClick
   });
 }
@@ -11073,7 +11046,7 @@ function LoginModal(_ref2) {
     e.preventDefault();
     if (username === "admin" && password === "admin123") {
       login();
-      navigate("/dashboard");
+      navigate("/admin/dashboard");
       onClose();
     } else {
       setError("Invalid username or password.");
@@ -11121,6 +11094,162 @@ function LoginModal(_ref2) {
 if (document.getElementById("root")) {
   react_dom__WEBPACK_IMPORTED_MODULE_1__.render(/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(Routers, {}), document.getElementById("root"));
 }
+
+/***/ }),
+
+/***/ "./resources/js/components/admin/Dashboard.js":
+/*!****************************************************!*\
+  !*** ./resources/js/components/admin/Dashboard.js ***!
+  \****************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
+
+var departments = [{
+  id: 1,
+  name: 'Computer Studies Program',
+  totalEnrolledStudents: 460,
+  courses: [{
+    name: 'Bachelor of Science in Information Technology',
+    enrolledStudents: 86
+  }, {
+    name: 'Bachelor of Science in Computer Science',
+    enrolledStudents: 98
+  }, {
+    name: 'Bachelor of Science in Information Technology with special training in Computer Animation',
+    enrolledStudents: 56
+  }, {
+    name: 'Diploma in Information Technology',
+    enrolledStudents: 57
+  }, {
+    name: 'Bachelor of Library and Information Science',
+    enrolledStudents: 87
+  }, {
+    name: 'Bachelor of Science in Entertainment and Multimedia Computing',
+    enrolledStudents: 76
+  }]
+}, {
+  id: 2,
+  name: 'Acountancy Program',
+  totalEnrolledStudents: 303,
+  courses: [{
+    name: 'Bachelor of Science in Accountancy Major in Accountancy',
+    enrolledStudents: 78
+  }, {
+    name: 'Bachelor of Science in Accountancy Major in Accounting Information System',
+    enrolledStudents: 89
+  }, {
+    name: 'Bachelor of Science in Accountancy Major in Internal Auditing',
+    enrolledStudents: 68
+  }, {
+    name: 'Bachelor of Science in Accountancy Major in Management Accounting',
+    enrolledStudents: 68
+  }]
+}, {
+  id: 3,
+  name: 'Business Administration Program',
+  totalEnrolledStudents: 605,
+  courses: [{
+    name: 'Bachelor of Science in Hospitality Management',
+    enrolledStudents: 121
+  }, {
+    name: 'Diploma in Hotel and Restaurant Services Technology',
+    enrolledStudents: 101
+  }, {
+    name: 'Bachelor of Science in Tourism Management',
+    enrolledStudents: 81
+  }, {
+    name: 'Bachelor of Science in Business Administration Major in Operation Management',
+    enrolledStudents: 91
+  }, {
+    name: 'Bachelor of Science in Business Administration Major in Financials Management',
+    enrolledStudents: 71
+  }, {
+    name: 'Bachelor of Science in Business Administration Major in Marketing Management',
+    enrolledStudents: 80
+  }, {
+    name: 'Bachelor of Science in Business Administration Major in Human Resource Management',
+    enrolledStudents: 60
+  }]
+}, {
+  id: 4,
+  name: 'Engineering and Technology Program',
+  totalEnrolledStudents: 204,
+  courses: [{
+    name: 'Bachelor of Science in Civil Engineering',
+    enrolledStudents: 106
+  }, {
+    name: 'Bachelor of Science in Industrial Engineering',
+    enrolledStudents: 98
+  }]
+}, {
+  id: 5,
+  name: 'Nursing Program',
+  totalEnrolledStudents: 202,
+  courses: [{
+    name: 'Bachelor of Science in Nursing',
+    enrolledStudents: 202
+  }]
+}];
+var DepartmentBox = function DepartmentBox(_ref) {
+  var department = _ref.department;
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+    className: "department-box",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("h2", {
+      children: department.name
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("p", {
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("b", {
+        children: "Total Enrolled Students:"
+      }), " ", department.totalEnrolledStudents]
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("ul", {
+      children: department.courses.map(function (course) {
+        return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("li", {
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("b", {
+            children: course.name
+          }), " : ", course.enrolledStudents, " students"]
+        }, course.name);
+      })
+    })]
+  });
+};
+var Dashboard = function Dashboard() {
+  var rows = [];
+  for (var i = 0; i < departments.length; i += 2) {
+    rows.push(departments.slice(i, i + 2));
+  }
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+    className: "dashboard",
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+      className: "content",
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("h1", {
+        children: "Admin Dashboard"
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("p", {
+        children: ["Welcome, ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("b", {
+          children: "MARK EZEQUIEL PEREYRA (22100001984)"
+        })]
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+        children: rows.map(function (row, rowIndex) {
+          return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+            className: "department-row",
+            children: row.map(function (department) {
+              return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(DepartmentBox, {
+                department: department
+              }, department.id);
+            })
+          }, rowIndex);
+        })
+      })]
+    })
+  });
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Dashboard);
 
 /***/ }),
 
