@@ -15,13 +15,12 @@ import { AuthProvider, useAuth } from "./AuthContext";
 export default function Routers() {
     const [isModalOpen, setIsModalOpen] = useState(false);
 
+    // Function to close modal and reset fields
     const handleModalClose = () => {
-        console.log("Modal closing");
         setIsModalOpen(false);
     };
 
     const handleLoginClick = () => {
-        console.log("Login button clicked, opening modal");
         setIsModalOpen(true);
     };
 
@@ -58,12 +57,20 @@ function LoginModal({ isOpen, onClose }) {
     const [password, setPassword] = useState("");
     const [error, setError] = useState("");
 
+    // Reset username and password when modal closes
+    const handleClose = () => {
+        setUsername(""); // Reset username
+        setPassword(""); // Reset password
+        setError("");    // Clear any error messages
+        onClose();       // Close the modal
+    };
+
     const handleSubmit = (e) => {
         e.preventDefault();
         if (username === "admin" && password === "admin123") {
             login();
             navigate("/admin/dashboard");
-            onClose();
+            handleClose(); // Close modal and reset fields
         } else {
             setError("Invalid username or password.");
             setPassword("");
@@ -71,31 +78,29 @@ function LoginModal({ isOpen, onClose }) {
     };
 
     return (
-        isOpen && (
-            <Modal isOpen={isOpen} onClose={onClose}>
-                <form onSubmit={handleSubmit} className='login-form'>
-                    <div className='form-group'>
-                        <label>Username:</label>
-                        <input
-                            type="text"
-                            value={username}
-                            onChange={(e) => setUsername(e.target.value)}
-                        />
-                    </div>
-                    <div className='form-group'>
-                        <label>Password:</label>
-                        <input
-                            type="password"
-                            value={password}
-                            onChange={(e) => setPassword(e.target.value)}
-                        />
-                        {error && <p className="error-message">{error}</p>}
-                    </div>
-                    <button type="submit">Login</button>
-                </form>
-            </Modal>
-        )
-    );
+    <Modal isOpen={isOpen} onClose={handleClose}> {/* Use handleClose to reset on close */}
+        <form onSubmit={handleSubmit} className='login-form'>
+            <div className='form-group'>
+                <label>Username:</label>
+                <input
+                    type="text"
+                    value={username}
+                    onChange={(e) => setUsername(e.target.value)}
+                />
+            </div>
+            <div className='form-group'>
+                <label>Password:</label>
+                <input
+                    type="password"
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
+                />
+                {error && <p className="error-message">{error}</p>}
+            </div>
+            <button type="submit">Login</button>
+        </form>
+    </Modal>
+);
 }
 
 if (document.getElementById("root")) {

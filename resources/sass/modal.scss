@@ -9,6 +9,14 @@
     justify-content: center;
     align-items: center;
     z-index: 1000;  // Ensure it sits above other elements
+    opacity: 0;  // Initially hidden
+    visibility: hidden;  // Hide from screen readers
+    transition: opacity 0.3s ease, visibility 0.3s ease; // Transition for opacity and visibility
+}
+
+.modal-overlay.open {
+    opacity: 1;  // Fade in effect
+    visibility: visible;  // Make it visible
 }
 
 .modal-content {
@@ -18,6 +26,12 @@
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);  // Adding shadow for depth
     width: 400px;  // Fixed width for consistency
     max-width: 90%;  // Responsive design
+    transform: translateY(-20px);  // Start above its final position
+    transition: transform 0.3s ease;  // Transition for transform property
+}
+
+.modal-overlay.open .modal-content {
+    transform: translateY(0);  // Move to final position
 }
 
 .close-button {
@@ -72,4 +86,11 @@ button[type="submit"] {
     &:hover {
         background-color: #0056b3;  // Darker blue on hover
     }
+}
+
+// ERROR MESSAGE IN LOGIN MODAL
+.error-message {
+    color: red; 
+    font-size: 0.9rem; 
+    margin-top: 5px; 
 }

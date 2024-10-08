@@ -11013,12 +11013,12 @@ function Routers() {
     _useState2 = _slicedToArray(_useState, 2),
     isModalOpen = _useState2[0],
     setIsModalOpen = _useState2[1];
+
+  // Function to close modal and reset fields
   var handleModalClose = function handleModalClose() {
-    console.log("Modal closing");
     setIsModalOpen(false);
   };
   var handleLoginClick = function handleLoginClick() {
-    console.log("Login button clicked, opening modal");
     setIsModalOpen(true);
   };
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_AuthContext__WEBPACK_IMPORTED_MODULE_10__.AuthProvider, {
@@ -11074,21 +11074,29 @@ function LoginModal(_ref2) {
     _useState8 = _slicedToArray(_useState7, 2),
     error = _useState8[0],
     setError = _useState8[1];
+
+  // Reset username and password when modal closes
+  var handleClose = function handleClose() {
+    setUsername(""); // Reset username
+    setPassword(""); // Reset password
+    setError(""); // Clear any error messages
+    onClose(); // Close the modal
+  };
   var handleSubmit = function handleSubmit(e) {
     e.preventDefault();
     if (username === "admin" && password === "admin123") {
       login();
       navigate("/admin/dashboard");
-      onClose();
+      handleClose(); // Close modal and reset fields
     } else {
       setError("Invalid username or password.");
       setPassword("");
     }
   };
-  return isOpen && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_Modal__WEBPACK_IMPORTED_MODULE_9__["default"], {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)(_Modal__WEBPACK_IMPORTED_MODULE_9__["default"], {
     isOpen: isOpen,
-    onClose: onClose,
-    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)("form", {
+    onClose: handleClose,
+    children: [" ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)("form", {
       onSubmit: handleSubmit,
       className: "login-form",
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)("div", {
@@ -11120,7 +11128,7 @@ function LoginModal(_ref2) {
         type: "submit",
         children: "Login"
       })]
-    })
+    })]
   });
 }
 if (document.getElementById("root")) {
