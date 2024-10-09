@@ -6,8 +6,11 @@ import Home from "./Home";
 import AboutUs from "./AboutUs";
 import ContactUs from "./ContactUs";
 import Dashboard from "./admin/Dashboard";
+import Student from "./admin/Student";        // Ensure Student component is imported
+import Notification from "./admin/Notification"; // Ensure Notification component is imported
+import Search from "./admin/Search";          // Ensure Search component is imported
 import Navlist from "./Navlist";
-import DashboardNavlist from "./DashboardNavlist";
+import DashboardNavlist from "./admin/DashboardNavlist";
 import Login from "./Login";
 import Modal from "./Modal"; // Ensure Modal is imported
 import { AuthProvider, useAuth } from "./AuthContext";
@@ -33,7 +36,10 @@ export default function Routers() {
                     <Route path="/home" element={<Home />} />
                     <Route path="/aboutus" element={<AboutUs />} />
                     <Route path="/contactus" element={<ContactUs />} />
-                    <Route path="/admin/*" element={<Dashboard />} />
+                    <Route path="/admin/dashboard" element={<Dashboard />} />
+                    <Route path="/admin/student" element={<Student />} />
+                    <Route path="/admin/notification" element={<Notification />} />
+                    <Route path="/admin/search" element={<Search />} />
                 </Routes>
                 <LoginModal isOpen={isModalOpen} onClose={handleModalClose} />
             </Router>
@@ -78,29 +84,29 @@ function LoginModal({ isOpen, onClose }) {
     };
 
     return (
-    <Modal isOpen={isOpen} onClose={handleClose}> {/* Use handleClose to reset on close */}
-        <form onSubmit={handleSubmit} className='login-form'>
-            <div className='form-group'>
-                <label>Username:</label>
-                <input
-                    type="text"
-                    value={username}
-                    onChange={(e) => setUsername(e.target.value)}
-                />
-            </div>
-            <div className='form-group'>
-                <label>Password:</label>
-                <input
-                    type="password"
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
-                />
-                {error && <p className="error-message">{error}</p>}
-            </div>
-            <button type="submit">Login</button>
-        </form>
-    </Modal>
-);
+        <Modal isOpen={isOpen} onClose={handleClose}> {/* Use handleClose to reset on close */}
+            <form onSubmit={handleSubmit} className='login-form'>
+                <div className='form-group'>
+                    <label>Username:</label>
+                    <input
+                        type="text"
+                        value={username}
+                        onChange={(e) => setUsername(e.target.value)}
+                    />
+                </div>
+                <div className='form-group'>
+                    <label>Password:</label>
+                    <input
+                        type="password"
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)}
+                    />
+                    {error && <p className="error-message">{error}</p>}
+                </div>
+                <button type="submit">Login</button>
+            </form>
+        </Modal>
+    );
 }
 
 if (document.getElementById("root")) {

@@ -1,9 +1,9 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { FaSearch } from 'react-icons/fa';  // Importing the search icon
-import fsuulogo from '../../../src/fsuulogo.png';
-import profileIcon from '../../../src/profile.png'; 
-import { useAuth } from './AuthContext';
+import fsuulogo from '../../../../src/fsuulogo.png';
+import profileIcon from '../../../../src/profile.png'; 
+import { useAuth } from '../AuthContext';
 
 
 export default function DashboardNavlist() {
@@ -47,8 +47,8 @@ export default function DashboardNavlist() {
             <div className="navbar-links">
                 <Link to="/admin/dashboard" className="navbar-link">Overview</Link>
                 <Link to="/admin/student" className="navbar-link">Students</Link>
-                <Link to="/admin/dashboard/notification" className="navbar-link">Notifications</Link>
-                <Link to="/admin/dashboard/search" className="navbar-link">
+                <Link to="/admin/notification" className="navbar-link">Notifications</Link>
+                <Link to="/admin/search" className="navbar-link">
                     <FaSearch className="search-icon" />
                 </Link>
 

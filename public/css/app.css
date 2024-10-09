@@ -12537,6 +12537,58 @@ button[type=submit]:hover {
   margin-bottom: 10px;
 }
 
+.student-management {
+  margin: 20px;
+}
+.student-management h1, .student-management .h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+.student-management form {
+  margin-bottom: 20px;
+}
+.student-management form input {
+  margin-bottom: 10px;
+  padding: 8px;
+  width: 100%;
+  max-width: 400px;
+}
+.student-management form button {
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.student-management form button:hover {
+  background-color: #0056b3;
+}
+.student-management table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.student-management table th, .student-management table td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: left;
+}
+.student-management table th {
+  background-color: #f4f4f4;
+}
+.student-management table button {
+  padding: 5px 10px;
+  margin-left: 5px;
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.student-management table button:hover {
+  background-color: #c82333;
+}
+
 body {
   font-family: Arial, sans-serif;
   margin: 0;
