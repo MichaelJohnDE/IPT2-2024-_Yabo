@@ -12361,6 +12361,11 @@ button[type=submit]:hover {
   background: none;
   border: none;
 }
+.headerDropdownBtn .userIcon:hover + .hovercard {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
+}
 .headerDropdownBtn .userIconImage {
   margin-right: 8px;
   width: 24px;
@@ -12381,7 +12386,7 @@ button[type=submit]:hover {
   z-index: 100;
   font-size: 1rem;
   transition: opacity 0.3s ease, visibility 0.3s ease;
-  pointer-events: none;
+  pointer-events: none; /* Prevent interaction when hidden */
 }
 .headerDropdownBtn .hovercard.hideHovercard {
   visibility: hidden;
@@ -12402,12 +12407,12 @@ button[type=submit]:hover {
   opacity: 0;
   transform: translateY(-10px);
   transition: opacity 0.3s ease, transform 0.3s ease;
-  pointer-events: none;
+  pointer-events: none; /* Prevent interaction when hidden */
 }
 .headerDropdownBtn .side-profile-bar.open {
   opacity: 1;
   transform: translateY(0);
-  pointer-events: auto;
+  pointer-events: auto; /* Enable interaction when visible */
 }
 
 .bannerbgcontainer {
@@ -12737,6 +12742,52 @@ button[type=submit]:hover {
 }
 .search-container .search-results p {
   color: #666;
+}
+
+.user-profile-container {
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.user-profile {
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+label {
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+input,
+select {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
 }
 
 body {

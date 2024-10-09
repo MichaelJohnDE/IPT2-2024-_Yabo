@@ -9,6 +9,7 @@ import Dashboard from "./admin/Dashboard";
 import Student from "./admin/Student";        // Ensure Student component is imported
 import Notification from "./admin/Notification"; // Ensure Notification component is imported
 import Search from "./admin/Search";          // Ensure Search component is imported
+import Profile from "./admin/Profile";
 import Navlist from "./Navlist";
 import DashboardNavlist from "./admin/DashboardNavlist";
 import Modal from "./Modal"; // Ensure Modal is imported
@@ -39,6 +40,7 @@ export default function Routers() {
                     <Route path="/admin/student" element={<Student />} />
                     <Route path="/admin/notification" element={<Notification />} />
                     <Route path="/admin/search" element={<Search />} />
+                    <Route path="/admin/profile" element={<Profile />} />
                 </Routes>
                 <LoginModal isOpen={isModalOpen} onClose={handleModalClose} />
             </Router>

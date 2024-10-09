@@ -65,8 +65,8 @@ export default function DashboardNavlist() {
 
                     {/* Dropdown content */}
                     <div className={`side-profile-bar ${dropdownOpen ? 'open' : ''}`}>
-                        <Link to="/admin/dashboard" className="side-profile-link">Dashboard</Link>
-                        <Link to="/admin/dashboard/profile" className="side-profile-link">Profile</Link>
+                        <Link to="/dashboard" className="side-profile-link">Dashboard</Link>
+                        <Link to="/admin/profile" className="side-profile-link">Profile</Link>
                         <button onClick={handleLogout} className="side-profile-link logout-button">Logout</button>
                     </div>
                 </div>

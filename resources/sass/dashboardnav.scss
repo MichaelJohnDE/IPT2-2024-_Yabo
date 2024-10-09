@@ -33,11 +33,18 @@ $hover-color: #0056b3; // Blue hover color
     align-items: center;
     position: relative;
     margin-left: 15px;
+
     .userIcon {
         display: flex;
         align-items: center;
         background: none;
         border: none;
+        
+        &:hover + .hovercard { // Show hovercard on icon hover
+            visibility: visible;
+            opacity: 1;
+            pointer-events: auto;
+        }
     }
 
     .userIconImage {
@@ -61,7 +68,7 @@ $hover-color: #0056b3; // Blue hover color
         z-index: 100;
         font-size: 1rem;
         transition: opacity 0.3s ease, visibility 0.3s ease;
-        pointer-events: none;
+        pointer-events: none; /* Prevent interaction when hidden */
     }
 
     .hovercard.hideHovercard {
@@ -84,17 +91,15 @@ $hover-color: #0056b3; // Blue hover color
         opacity: 0;
         transform: translateY(-10px);
         transition: opacity 0.3s ease, transform 0.3s ease;
-        pointer-events: none;
+        pointer-events: none; /* Prevent interaction when hidden */
     }
 
     .side-profile-bar.open {
         opacity: 1;
         transform: translateY(0);
-        pointer-events: auto;
+        pointer-events: auto; /* Enable interaction when visible */
     }
 }
-
-
 
 .bannerbgcontainer {
     background-color: #f1f1f1;
