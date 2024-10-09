@@ -48,41 +48,78 @@ $hover-color: #0056b3; // Blue hover color
 
 .headerDropdownBtn {
     position: relative;
+
+    .hovercard {
+        visibility: hidden;  /* Ensure the hovercard is hidden by default */
+        opacity: 0;          /* Set initial opacity to 0 */
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background-color: #ffffff;
+        color: $primary-color;
+        padding: 10px;
+        border-radius: 5px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        white-space: nowrap;
+        z-index: 100;
+        font-size: 1rem;
+        transition: opacity 0.3s ease, visibility 0.3s ease;  /* Smooth visibility and opacity transition */
+        pointer-events: none; /* Prevent interaction when hidden */
+    }
+
+    /* Show hovercard only when hovering the user icon, and the dropdown is not open */
+    .userIcon:hover + .hovercard:not(.hideHovercard),
+    .userIcon:hover ~ .hovercard:not(.hideHovercard),
+    .userIconImage:hover + .hovercard:not(.hideHovercard) {
+        visibility: visible;
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    /* Hide hovercard when the dropdown is open */
+    .hovercard.hideHovercard {
+        visibility: hidden;
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    .userIcon {
+        display: flex;
+        align-items: center;
+        background: none;
+        border: none;
+    }
+
+    .userIconImage {
+        margin-right: 8px;
+        width: 24px;
+        height: 24px;
+    }
+
+    .side-profile-bar {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background-color: white;
+        width: 400px; 
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        z-index: 10;
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        opacity: 0;
+        transform: translateY(-10px);
+        transition: opacity 0.3s ease, transform 0.3s ease;
+        pointer-events: none; /* Prevent interaction when hidden */
+    }
+
+    .side-profile-bar.open {
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: auto; /* Enable interaction when visible */
+    }
 }
 
-.userIcon {
-    display: flex;
-    align-items: center;
-    background: none;
-    border: none;
-}
-
-.userIconImage {
-    margin-right: 8px;
-    width: 24px;
-    height: 24px;
-}
-
-.side-profile-bar {
-    position: absolute;
-    top: 100%;
-    right: 0;
-    background-color: white;
-    width: 400px; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    z-index: 10;
-    padding: 1rem;
-    display: flex;
-    flex-direction: column;
-    opacity: 0;
-    transform: translateY(-10px);
-    transition: opacity 0.3s ease, transform 0.3s ease;
-}
-
-.side-profile-bar.open {
-    opacity: 1;
-    transform: translateY(0);
-}
 
 .bannerbgcontainer {
     background-color: #f1f1f1;

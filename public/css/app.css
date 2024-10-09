@@ -12398,22 +12398,50 @@ button[type=submit]:hover {
 
 .headerDropdownBtn {
   position: relative;
+  /* Show hovercard only when hovering the user icon, and the dropdown is not open */
+  /* Hide hovercard when the dropdown is open */
 }
-
-.userIcon {
+.headerDropdownBtn .hovercard {
+  visibility: hidden; /* Ensure the hovercard is hidden by default */
+  opacity: 0; /* Set initial opacity to 0 */
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: #ffffff;
+  color: #2c3e50;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  white-space: nowrap;
+  z-index: 100;
+  font-size: 1rem;
+  transition: opacity 0.3s ease, visibility 0.3s ease; /* Smooth visibility and opacity transition */
+  pointer-events: none; /* Prevent interaction when hidden */
+}
+.headerDropdownBtn .userIcon:hover + .hovercard:not(.hideHovercard),
+.headerDropdownBtn .userIcon:hover ~ .hovercard:not(.hideHovercard),
+.headerDropdownBtn .userIconImage:hover + .hovercard:not(.hideHovercard) {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
+}
+.headerDropdownBtn .hovercard.hideHovercard {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+.headerDropdownBtn .userIcon {
   display: flex;
   align-items: center;
   background: none;
   border: none;
 }
-
-.userIconImage {
+.headerDropdownBtn .userIconImage {
   margin-right: 8px;
   width: 24px;
   height: 24px;
 }
-
-.side-profile-bar {
+.headerDropdownBtn .side-profile-bar {
   position: absolute;
   top: 100%;
   right: 0;
@@ -12427,11 +12455,12 @@ button[type=submit]:hover {
   opacity: 0;
   transform: translateY(-10px);
   transition: opacity 0.3s ease, transform 0.3s ease;
+  pointer-events: none; /* Prevent interaction when hidden */
 }
-
-.side-profile-bar.open {
+.headerDropdownBtn .side-profile-bar.open {
   opacity: 1;
   transform: translateY(0);
+  pointer-events: auto; /* Enable interaction when visible */
 }
 
 .bannerbgcontainer {

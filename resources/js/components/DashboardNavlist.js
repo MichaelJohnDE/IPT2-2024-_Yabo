@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import { FaSearch } from 'react-icons/fa';  // Importing the search icon
 import fsuulogo from '../../../src/fsuulogo.png';
 import profileIcon from '../../../src/profile.png'; 
 import { useAuth } from './AuthContext';
@@ -45,17 +46,24 @@ export default function DashboardNavlist() {
             <div className="navbar-links">
                 <Link to="/admin/dashboard" className="navbar-link">Overview</Link>
                 <Link to="/admin/student" className="navbar-link">Students</Link>
-                <Link to="/dashboard/notification" className="navbar-link">Notifications</Link>
-                <Link to="/dashboard/search" className="navbar-link">Search</Link>
-                <div className="headerDropdownBtn" ref={dropdownRef}>
+                <Link to="/admin/dashboard/notification" className="navbar-link">Notifications</Link>
+                <Link to="/admin/dashboard/search" className="navbar-link">
+                    <FaSearch className="search-icon" />
+                </Link>
+
+                <div className={`headerDropdownBtn ${dropdownOpen ? 'dropdownOpen' : ''}`} ref={dropdownRef}>
                     <button onClick={toggleDropdown} className="userIcon">
                         <img src={profileIcon} alt="User Icon" className="userIconImage" />
                         <span>MARK E...</span>
                     </button>
+
+                    {/* Hovercard for Full Name */}
+                    <div className={`hovercard ${dropdownOpen ? 'hideHovercard' : ''}`}>
+                        MARK EZEQUIEL PEREYRA
+                    </div>
+
+                    {/* Dropdown content */}
                     <div className={`side-profile-bar ${dropdownOpen ? 'open' : ''}`}>
-                        <div className="bannerbgcontainer">
-                            <p className="student-fullname">MARK EZEQUIEL PEREYRA</p>
-                        </div>
                         <Link to="/dashboard" className="side-profile-link">Dashboard</Link>
                         <Link to="/dashboard/profile" className="side-profile-link">Profile</Link>
                         <button onClick={handleLogout} className="side-profile-link logout-button">Logout</button>
