@@ -1,5 +1,6 @@
-import React, { useState, useEffect, useRef } from "react"; 
+import React, { useState, useEffect, useRef } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import { FaSearch } from 'react-icons/fa';  // Importing the search icon
 import fsuulogo from '../../../src/fsuulogo.png';
 import profileIcon from '../../../src/profile.png'; 
 import { useAuth } from './AuthContext';
@@ -9,7 +10,7 @@ export default function DashboardNavlist() {
     const { logout } = useAuth();
     const [dropdownOpen, setDropdownOpen] = useState(false);
     const dropdownRef = useRef(null);
-    const navigate = useNavigate();
+    const navigate = useNavigate(); // To handle redirection
 
     const toggleDropdown = () => {
         setDropdownOpen(!dropdownOpen);
@@ -36,27 +37,34 @@ export default function DashboardNavlist() {
             console.error("Failed to log out:", error);
         }
     };
-    
+
     return (
         <nav className="dashboard-navbar">
             <div className="dashboard-navbar-brand">
                 <img src={fsuulogo} alt="Logo" className="logo" />
                 <span className="brand-text">Father Saturnino Urios University</span>
             </div>
-            <div className="dashboard-navbar-links">
-                <Link to="/admin/dashboard" className="dashboard-navbar-link">Overview</Link>
-                <Link to="/admin/student" className="dashboard-navbar-link">Students</Link>
-                <Link to="/dashboard/notification" className="dashboard-navbar-link">Notifications</Link>
-                <Link to="/dashboard/search" className="dashboard-navbar-link">Search</Link>
-                <div className="headerDropdownBtn" ref={dropdownRef}>
+            <div className="navbar-links">
+                <Link to="/admin/dashboard" className="navbar-link">Overview</Link>
+                <Link to="/admin/student" className="navbar-link">Students</Link>
+                <Link to="/admin/dashboard/notification" className="navbar-link">Notifications</Link>
+                <Link to="/admin/dashboard/search" className="navbar-link">
+                    <FaSearch className="search-icon" />
+                </Link>
+
+                <div className={`headerDropdownBtn ${dropdownOpen ? 'dropdownOpen' : ''}`} ref={dropdownRef}>
                     <button onClick={toggleDropdown} className="userIcon">
                         <img src={profileIcon} alt="User Icon" className="userIconImage" />
                         <span>MARK E...</span>
                     </button>
+
+                    {/* Hovercard for Full Name */}
+                    <div className={`hovercard ${dropdownOpen ? 'hideHovercard' : ''}`}>
+                        MARK EZEQUIEL PEREYRA
+                    </div>
+
+                    {/* Dropdown content */}
                     <div className={`side-profile-bar ${dropdownOpen ? 'open' : ''}`}>
-                        <div className="bannerbgcontainer">
-                            <p className="student-fullname">MARK EZEQUIEL PEREYRA</p>
-                        </div>
                         <Link to="/dashboard" className="side-profile-link">Dashboard</Link>
                         <Link to="/dashboard/profile" className="side-profile-link">Profile</Link>
                         <button onClick={handleLogout} className="side-profile-link logout-button">Logout</button>
