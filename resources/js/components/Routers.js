@@ -11,7 +11,6 @@ import Notification from "./admin/Notification"; // Ensure Notification componen
 import Search from "./admin/Search";          // Ensure Search component is imported
 import Navlist from "./Navlist";
 import DashboardNavlist from "./admin/DashboardNavlist";
-import Login from "./Login";
 import Modal from "./Modal"; // Ensure Modal is imported
 import { AuthProvider, useAuth } from "./AuthContext";
 

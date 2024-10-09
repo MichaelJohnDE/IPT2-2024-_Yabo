@@ -1,4 +1,5 @@
 import React from 'react';
+import Footer from './../Footer';
 
 const departments = [
   {
@@ -95,6 +96,7 @@ const Dashboard = () => {
           ))}
         </div>
       </div>
+      <Footer />
     </div>
   );
 };

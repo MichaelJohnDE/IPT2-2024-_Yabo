@@ -5,7 +5,6 @@ import fsuulogo from '../../../../src/fsuulogo.png';
 import profileIcon from '../../../../src/profile.png'; 
 import { useAuth } from '../AuthContext';
 
-
 export default function DashboardNavlist() {
     const { logout } = useAuth();
     const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -48,6 +47,7 @@ export default function DashboardNavlist() {
                 <Link to="/admin/dashboard" className="navbar-link">Overview</Link>
                 <Link to="/admin/student" className="navbar-link">Students</Link>
                 <Link to="/admin/notification" className="navbar-link">Notifications</Link>
+
                 <Link to="/admin/search" className="navbar-link">
                     <FaSearch className="search-icon" />
                 </Link>
@@ -65,8 +65,8 @@ export default function DashboardNavlist() {
 
                     {/* Dropdown content */}
                     <div className={`side-profile-bar ${dropdownOpen ? 'open' : ''}`}>
-                        <Link to="/dashboard" className="side-profile-link">Dashboard</Link>
-                        <Link to="/dashboard/profile" className="side-profile-link">Profile</Link>
+                        <Link to="/admin/dashboard" className="side-profile-link">Dashboard</Link>
+                        <Link to="/admin/dashboard/profile" className="side-profile-link">Profile</Link>
                         <button onClick={handleLogout} className="side-profile-link logout-button">Logout</button>
                     </div>
                 </div>
