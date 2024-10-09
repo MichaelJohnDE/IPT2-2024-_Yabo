@@ -121,7 +121,7 @@ const StudentManagement = () => {
           ))}
         </tbody>
       </table>
-      <Footer />
+
     </div>
   );
 };

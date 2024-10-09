@@ -166,12 +166,114 @@
     }
 }
 
-  
-  
+ // NOTIFICATION PAGE >>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ 
+ .notification-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
 
-  
-  
-  
-  
-  
-  
+  h1 {
+    margin-bottom: 20px;
+  }
+
+  .notification-list {
+    width: 100%;
+    max-width: 600px; // Set a max width for the notifications container
+    margin: 0 auto;
+  }
+
+  .notification-item {
+    background-color: #f9f9f9; // Default background color
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin: 10px 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    h2 {
+      margin: 0;
+      font-size: 18px;
+    }
+
+    p {
+      margin: 5px 0 0;
+      color: #777;
+    }
+
+    &:hover {
+      background-color: #e9e9e9; // Change background on hover
+    }
+  }
+
+  .unread {
+    background-color: #ffe3e3; // Highlight unread notifications
+    border-left: 5px solid red; // Add a left border for emphasis
+  }
+}
+
+
+
+//MODAL FOR NOTIF
+
+.modal2 {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1000; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+  transition: opacity 0.3s ease; /* Fade transition */
+  opacity: 0; /* Start hidden */
+
+  &.open {
+    display: block; /* Show modal when open */
+    opacity: 1; /* Fade in */
+  }
+
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+    border-radius: 8px;
+    animation: slideIn 0.3s ease; /* Slide-in animation */
+    position: relative; /* Position relative for absolute positioning of the close button */
+  }
+
+  .close {
+    color: red; /* Change close button color to red */
+    position: absolute; /* Position it absolutely */
+    top: 10px; /* Adjust as needed */
+    right: 15px; /* Adjust as needed */
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      color: darkred; /* Change color on hover for better visibility */
+    }
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-30px); /* Slide in from above */
+    opacity: 0; /* Start hidden */
+  }
+  to {
+    transform: translateY(0); /* End at its position */
+    opacity: 1; /* Fully visible */
+  }
+}
+
+
+
